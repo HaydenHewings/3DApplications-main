@@ -11,31 +11,27 @@
 
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_button.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
 
 <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script>
 <script src="js/bootstrap.js"></script>
 
-<title>3DSodaApp</title>
+<title>Cola Page</title>
 </head>
 <body id="bodyColor">
   <nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
       <div class="container-fluid"> 
    
-          <div class="logo">
-                  <a class="navbar-brand" href="#">
-                      <h1>Y</h1>
-                      <h1>M</h1>
-                      <h1>C</h1>
-                      <h1>A</h1>
-                      <p>It's fun to stay at the</p>
-                  </a>
-          </div>
+        <div class="logo">
+          <img class="mx-auto d-block" src="assets/images/DreamDecor.png" alt="Coca Cola">
+        </div>
 
      
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
@@ -44,9 +40,9 @@
       
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
            
-              <ul class="navbar-nav ml-auto">
+              <ul class="navbar-nav ms-auto">
                   <li class="nav-item">
-                          <a class="nav-link active" href="index.html">Home</a>
+                          <a class="nav-link active" href="#">Home</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#" data-toggle="popover" data-trigger="hover" data-placement="bottom" title="About Web 3D Applications">About</a>
@@ -54,14 +50,14 @@
               
                   <!-- Dropdown -->
                   <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-bs-toggle="dropdown">
+                      <a class="nav-link dropdown-toggle" href="index.html" id="navbardrop" data-bs-toggle="dropdown">
                           Drinks
                       </a>
                       <div class="dropdown-menu">
-                          <a class="dropdown-item" href="coke.html">Coca Cola</a>
-                          <a class="dropdown-item" href="#">Sprite</a>
-                          <a class="dropdown-item" href="#">Dr Pepper</a>
-                      </div>
+                        <a class="dropdown-item" href="room.html">View Rooms</a>
+                        <a class="dropdown-item" href="bed.html">View Beds</a>
+                        <a class="dropdown-item" href="furniture.html">View Furniture</a>
+                    </div>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</a>
@@ -82,49 +78,62 @@
   </div>
 
   <br>
+ <div id="gui-container"></div>
+ <div class="container-fluid main-contents">
+   <div class="row">
+        <div class="col-sm-10">
+      <div class="card" style="position: relative;">
+        <div class="card-header">
+          <h1> Let's Drink!</h1>
+        </div>
+        <div class="card-body">
+    <div class="d-flex align-items-center">
+<canvas id="threeContainer"></canvas>
+        </div>
+        <button id="btn">
+          Open can
+        </button>
+        <button id="toggleWireframe">
+          Toggle Wireframe
+        </button>
+        <button id="Rotate">
+          Rotate
+        </button>
+        <button id="switchModel">
+          Switch Model
+        </button>
+        <button id="playSecondModelAnimation">
+          Hey, let's Recycle!
+        </button>
+      </div>
+    </div>
+  </div>
 
-<div class="row">
-  <div class="col-sm-4">
-    <div class="card">
-      <a href="CocaCola">
-        <img class="card-img-top img-fluid img-thumbnail" src="assets/images/coca_cola.jpg" alt="Coca Cola">
-      </a>
-      <div class="card-body">
-        <h3 class="card-title">Coca Cola</h3>
-        <p class="card-text">Atlanta Beginnings: It was 1886, and in New York Harbour, workers were constructing the Statue of Liberty. Eight hundred miles away, another great American symbol was about to be unveiled.
-         Like many people who change history, John Pemberton, an Atlanta pharmacist, was inspired by simple curiosity. One afternoon, he stirred up a fragrant, caramel-coloured liquid and, when it was done, he carried it a few doors down to Jacobs' Pharmacy. Here, the mixture was combined with carbonated water and sampled by customers who all agreed - this new drink was something special. So Jacobs' Pharmacy put it on sale for five cents (about 3p) a glass.</p>
-         <a href="Coca Cola" class="btn btn-primary"> Find out more ...</a>
-      </div>
-    </div>
-  </div>
-  
-  <div class="col-sm-4">
-    <div class="card">
-      <a href="Sprite">
-        <img class="card-img-top img-fluid img-thumbnail" src="assets/images/sprite.jpg" alt="Sprite">
-      </a>
-      <div class="card-body">
-        <h3 class="card-title">Sprite</h3>
-        <p class="card-text">First introduced in 1961, crisp, refreshing, clean-tasting Sprite is now the world's leading lemon and lime flavoured soft drink and is sold in more than 190 different countries.
-          Sprite Zero, part of our no sugar Zero range, offers the delicious lemon lime taste of Sprite without the sugar or calories. </p>
-          <a href="Sprite" class="btn btn-primary"> Find out more ...</a>
-      </div>
-    </div>
-  </div>
+<div id ="threeContainer"></div>
 
-  <div class="col-sm-4">
-    <div class="card">
-      <a href="Dr. Pepper">
-        <img class="card-img-top img-fluid img-thumbnail" src="assets/images/dr_pepper.jpg" alt="Dr. Pepper">
-      </a>
-      <div class="card-body">
-        <h3 class="card-title">Dr. Pepper</h3>
-        <p class="card-text">Dr Pepper's unique, sparkling blend of 23 fruit flavours has been around for well over a century and it's still the same, with that distinctive flavour you just can't quite put your tongue on.
-          It was created by Texas pharmacist Charles Alderton in 1885. He gave a sample of the first ever batch to Wade Morrison, a local shop owner, and Mr Morrison instantly agreed to stock the drink. The distinctive, bold taste of Dr Pepper has been popular ever since. </p>
-          <a href="Dr. Pepper" class="btn btn-primary"> Find out more ...</a>
-      </div>
-    </div>
-  </div>
+<script>
+
+  function updateContainerSize() {
+var container = document.getElementById('threeContainer');
+var width = window.innerWidth;
+var height = window.innerHeight;
+
+container.width = width;
+container.height = height;
+
+
+  }
+
+  window.addEventListener('load', updateContainerSize)
+  window.addEventListener('resize', updateContainerSize)
+
+</script>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/106/three.min.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/OrbitControls.js'></script>
+<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/2666677/GLTFLoader.js'></script>
+<script src="./script.js"></script>
+
 
 <br>
 
