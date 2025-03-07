@@ -1,6 +1,7 @@
 var scene, camera, renderer, clock, mixer, actions = [], mode, isWireframe = false, params, lights;
 let loadedModel;
 let secondModelMixer, secondModelActions = [];
+let thirdModelMixer, thirdModelActions = [];
 let sound, secondSound;
 
 init();
@@ -178,7 +179,7 @@ actions.push(action);
 
 });
 
-if(modelPath === 'assets/models/CanModelCrush.glb') {
+if(modelPath === 'assets/models/BedDesignB.glb') {
 secondModelMixer = mixer;
 secondModelActions = actions;
 
@@ -188,11 +189,11 @@ secondModelActions = actions;
 
 }
 
-loadModel('assets/models/CanModel.glb');
+loadModel('assets/models/BedDesignA.glb');
 
 const switchBtn = document.getElementById("switchModel");
 switchBtn.addEventListener('click', function () {
-loadModel('assets/models/CanModelCrush.glb');
+loadModel('assets/models/BedDesignB.glb');
 
 });
 

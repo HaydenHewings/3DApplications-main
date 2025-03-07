@@ -1,6 +1,7 @@
 var scene, camera, renderer, clock, mixer, actions = [], mode, isWireframe = false, params, lights;
 let loadedModel;
 let secondModelMixer, secondModelActions = [];
+let thirdModelMixer, thirdModelActions = [];
 let sound, secondSound;
 
 init();
@@ -96,20 +97,18 @@ sound.setVolume(1,0);
   controls.update();
   
   // Button to control animations
-  mode = 'open';
   const btn = document.getElementById("btn");
   btn.addEventListener('click', function() {
-    if (actions.length === 2) {
-      if (mode === "open") {
+    if (actions.length>0) {
         actions.forEach(action => {
-          action.timeScale = 1;
           action.reset();
+          action.setLoop(THREE.LoopOnce);
+          action.clampWhenFinished = true;
           action.play();
-          if (sound.isPlaying) sound.stop();
-          sound.play();
+        if (sound.isPlaying) sound.stop();
+        sound.play();
 
         });
-      }
     }
   });
   
@@ -132,26 +131,6 @@ loadedModel.rotateOnAxis(axis, angle);
 }
 
   });
-
-  const playSecondModelAnimationBtn = document.getElementById("playSecondModelAnimation");
-  playSecondModelAnimationBtn.addEventListener('click', function () {
-
-if(secondModelActions.length>0){
-secondModelActions.forEach(action => {
-  action.reset();
-  action.setLoop(THREE.LoopOnce);
-  action.clampWhenFinished = true;
-  action.play();
-if (secondSound.isPlaying) secondSound.stop();
-secondSound.play();
-
-});
-
-} else {
-  console.warn('No animation available for the second model');
-}
-
-});
 
 const loader = new THREE.GLTFLoader();
 function loadModel(modelPath) {
@@ -178,7 +157,7 @@ actions.push(action);
 
 });
 
-if(modelPath === 'assets/models/CanModelCrush.glb') {
+if(modelPath === 'assets/models/BedDesignB.glb') {
 secondModelMixer = mixer;
 secondModelActions = actions;
 
@@ -186,13 +165,27 @@ secondModelActions = actions;
 
 });
 
+
+
 }
 
-loadModel('assets/models/CanModel.glb');
+loadModel('assets/models/BedDesignA.glb');
 
-const switchBtn = document.getElementById("switchModel");
+const switchBtn = document.getElementById("showModelA");
 switchBtn.addEventListener('click', function () {
-loadModel('assets/models/CanModelCrush.glb');
+loadModel('assets/models/BedDesignA.glb');
+
+});
+
+const switchBtn2 = document.getElementById("showModelB");
+switchBtn2.addEventListener('click', function () {
+loadModel('assets/models/BedDesignB.glb');
+
+});
+
+const switchBtn3 = document.getElementById("showModelC");
+switchBtn3.addEventListener('click', function () {
+loadModel('assets/models/BedDesignC.glb');
 
 });
 
