@@ -136,124 +136,6 @@ actions.push(action);
 
 });
 
-if(modelPath === 'assets/models/BedDesignB.glb') {
-secondModelMixer = mixer;
-secondModelActions = actions;
-
-}
-
-});
-
-
-
-}
-
-loadModel('assets/models/RoomA.glb');
-model.position.set(0, 0, 0)
-
-const switchBtn = document.getElementById("showRoomModelA");
-switchBtn.addEventListener('click', function () {
-loadModel('assets/models/BedroomBaseA.glb');
-
-});
-
-const switchBtn2 = document.getElementById("showRoomModelB");
-switchBtn2.addEventListener('click', function () {
-loadModel('assets/models/BedroomBaseB.glb');
-
-});
-
-const switchBtn3 = document.getElementById("showRoomModelC");
-switchBtn3.addEventListener('click', function () {
-loadModel('assets/models/BedroomBaseC.glb');
-
-});
-
-const loader2 = new THREE.GLTFLoader();
-function loadModel(modelPath2) {
-if(loadedModel2) {
-  scene.remove(loadedModel2);
-}
-
-loader.load(modelPath2, function (gltf) {
-const model = gltf.scene;
-
-model.position.set(0, 0, 0);
-model.scale.set(0.2, 0.2, 0.2);
-
-scene.add(model);
-
-loadedModel = model;
-
-mixer = new THREE.AnimationMixer(model);
-const animations = gltf.animations;
-action = [];
-
-animations.forEach(clip=>{
-const action = mixer.clipAction(clip);
-actions.push(action);
-
-});
-
-if(modelPath === 'assets/models/BedDesignB.glb') {
-secondModelMixer = mixer;
-secondModelActions = actions;
-
-}
-
-});
-
-
-
-}
-
-loadModel('assets/models/BedDesignA.glb');
-model.position.set(0, 0, 0)
-
-const switchBtn4 = document.getElementById("showBedModelA");
-switchBtn.addEventListener('click', function () {
-loadModel('assets/models/BedDesignA.glb');
-
-});
-
-const switchBtn5 = document.getElementById("showBedModelB");
-switchBtn2.addEventListener('click', function () {
-loadModel('assets/models/BedDesignB.glb');
-
-});
-
-const switchBtn6 = document.getElementById("showBedModelC");
-switchBtn3.addEventListener('click', function () {
-loadModel('assets/models/BedDesignC.glb');
-
-});
-
-const loader3 = new THREE.GLTFLoader();
-function loadModel(modelPath3) {
-if(loadedModel3) {
-  scene.remove(loadedModel3);
-}
-
-loader.load(modelPath3, function (gltf) {
-const model = gltf.scene;
-
-model.position.set(0, 0, 0);
-model.scale.set(0.2, 0.2, 0.2);
-
-scene.add(model);
-
-loadedModel = model;
-
-mixer = new THREE.AnimationMixer(model);
-const animations = gltf.animations;
-action = [];
-
-animations.forEach(clip=>{
-const action = mixer.clipAction(clip);
-actions.push(action);
-
-});
-
 if(modelPath === 'assets/models/Shelves.glb') {
 secondModelMixer = mixer;
 secondModelActions = actions;
@@ -266,26 +148,26 @@ secondModelActions = actions;
 
 }
 
-loadModel('assets/models/BedDesignA.glb');
-model.position.set(0, 0, 0)
+loadModel('assets/models/Wardrobe.glb');
 
-const switchBtn7 = document.getElementById("showFurnitureModelA");
+const switchBtn = document.getElementById("showModelA");
 switchBtn.addEventListener('click', function () {
 loadModel('assets/models/Wardrobe.glb');
 
 });
 
-const switchBtn8 = document.getElementById("showFurnitureModelB");
+const switchBtn2 = document.getElementById("showModelB");
 switchBtn2.addEventListener('click', function () {
 loadModel('assets/models/Shelves.glb');
 
 });
 
-const switchBtn9 = document.getElementById("showFurnitureModelC");
+const switchBtn3 = document.getElementById("showModelC");
 switchBtn3.addEventListener('click', function () {
 loadModel('assets/models/Desk.glb');
 
 });
+
  
   // Handle resizing
   window.addEventListener('resize', resize, false);
