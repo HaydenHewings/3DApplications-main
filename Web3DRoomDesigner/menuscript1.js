@@ -14,8 +14,8 @@ clock = new THREE.Clock();
   scene.background = new THREE.Color(0xfffdd0);
   
   // Set up the camera
-  camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.set(-5, 25, 20);
+  camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, .1, 500);
+  camera.position.set(0, -10, 10);
 
   
 // Add lighting
@@ -84,9 +84,9 @@ function animate() {
 function resize() {
   const canvas = document.getElementById('threeContainer');
   const width = window.innerWidth;
-  const height = window.innerHeight;
+  const height = 500;
 
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
-  renderer.setSize(width, height);
+  renderer.setSize(width, 400);
 }
