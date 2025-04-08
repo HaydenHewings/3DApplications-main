@@ -11,7 +11,7 @@ clock = new THREE.Clock();
 
 // Create the scene
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0xfffdd0);
+  scene.background = new THREE.Color(c4f5f5);
   
   // Set up the camera
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);

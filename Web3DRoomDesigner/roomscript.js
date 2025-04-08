@@ -19,7 +19,7 @@ clock = new THREE.Clock();
   
   // Set up the camera
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.set(-5, 25, 20);
+  camera.position.set(1, 2, 6);
 
   const listener = new THREE.AudioListener();
   camera.add(listener);

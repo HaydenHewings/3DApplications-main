@@ -29,8 +29,20 @@
     font-family: arial;
   }
 
-  #switchModel{
-    background: #fea;
+  #showModelA{
+    background: rgb(255, 204, 0);
+    padding: 15px;
+    font-family: arial;
+  }
+
+  #showModelB{
+    background: rgb(255, 204, 0);
+    padding: 15px;
+    font-family: arial;
+  }
+
+  #showModelC{
+    background: rgb(255, 204, 0);
     padding: 15px;
     font-family: arial;
   }

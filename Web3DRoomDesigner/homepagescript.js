@@ -1,4 +1,4 @@
-var scene, camera, renderer, clock, mixer, actions = [], mode, isWireframe = false, params, lights;
+var scene, camera, renderer, clock, loader, mixer, actions = [], mode, isWireframe = false, params, lights;
 let loadedModel;
 let secondModelMixer, secondModelActions = [];
 let thirdModelMixer, thirdModelActions = [];
@@ -15,32 +15,11 @@ clock = new THREE.Clock();
 
 // Create the scene
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(0x00aaff);
+  scene.background = new THREE.Color(0xc4f5f5);
   
   // Set up the camera
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.set(1, 2, 6);
-
-  const listener = new THREE.AudioListener();
-  camera.add(listener);
-
-  sound = new THREE.Audio(listener);
-  secondSound = new THREE.Audio(listener);
-
-  const audioLoader = new THREE.AudioLoader();
-  audioLoader.load('assets/can_opening.mp3', function (buffer) {
-sound.setBuffer(buffer);
-sound.setLoop(false);
-sound.setVolume(1,0);
-
-  });
-
-  audioLoader.load('assets/Can crush.mp3', function (buffer) {
-    secondSound.setBuffer(buffer);
-    secondSound.setLoop(false);
-    secondSound.setVolume(1,0);
-  });
-  
 
   const ambient = new THREE.HemisphereLight(0xffffbb, 0x080820, 4);
   scene.add(ambient);
@@ -93,24 +72,8 @@ sound.setVolume(1,0);
 
   // Add OrbitControls
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.target.set(1, 1, 1);
+  controls.target.set(0, 1, 0);
   controls.update();
-  
-  // Button to control animations
-  const btn = document.getElementById("btn");
-  btn.addEventListener('click', function() {
-    if (actions.length>0) {
-        actions.forEach(action => {
-          action.reset();
-          action.setLoop(THREE.LoopOnce);
-          action.clampWhenFinished = true;
-          action.play();
-        if (sound.isPlaying) sound.stop();
-        sound.play();
-
-        });
-    }
-  });
   
   const wireframeBtn = document.getElementById("toggleWireframe");
   wireframeBtn.addEventListener('click', function () {
@@ -157,7 +120,7 @@ actions.push(action);
 
 });
 
-if(modelPath === 'assets/models/BedDesignB.glb') {
+if(modelPath === 'assets/models/RoomBBB.glb') {
 secondModelMixer = mixer;
 secondModelActions = actions;
 
@@ -169,23 +132,23 @@ secondModelActions = actions;
 
 }
 
-loadModel('assets/models/BedDesignA.glb');
+loadModel('assets/models/RoomAAA.glb');
 
 const switchBtn = document.getElementById("showModelA");
 switchBtn.addEventListener('click', function () {
-loadModel('assets/models/BedDesignA.glb');
+loadModel('assets/models/RoomAAA.glb');
 
 });
 
 const switchBtn2 = document.getElementById("showModelB");
 switchBtn2.addEventListener('click', function () {
-loadModel('assets/models/BedDesignB.glb');
+loadModel('assets/models/RoomBBB.glb');
 
 });
 
 const switchBtn3 = document.getElementById("showModelC");
 switchBtn3.addEventListener('click', function () {
-loadModel('assets/models/BedDesignC.glb');
+loadModel('assets/models/RoomCCC.glb');
 
 });
 
