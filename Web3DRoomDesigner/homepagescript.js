@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 var scene, camera, renderer, clock, loader, mixer, actions = [], mode, isWireframe = false, params, lights;
+=======
+var scene, camera, renderer, clock, mixer, actions = [], mode, isWireframe = false, params, lights;
+>>>>>>> bc903e3a0329403fa2e32164f2e3683e96cd749b
 let loadedModel;
 let secondModelMixer, secondModelActions = [];
 let thirdModelMixer, thirdModelActions = [];
@@ -15,11 +19,19 @@ clock = new THREE.Clock();
 
 // Create the scene
   scene = new THREE.Scene();
+<<<<<<< HEAD
   scene.background = new THREE.Color(0xc4f5f5);
   
   // Set up the camera
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
   camera.position.set(1, 2, 6);
+=======
+  scene.background = new THREE.Color(0x00aaff);
+  
+  // Set up the camera
+  camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+  camera.position.set(-5, 25, 20);
+>>>>>>> bc903e3a0329403fa2e32164f2e3683e96cd749b
 
   const ambient = new THREE.HemisphereLight(0xffffbb, 0x080820, 4);
   scene.add(ambient);
@@ -72,8 +84,14 @@ clock = new THREE.Clock();
 
   // Add OrbitControls
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
+<<<<<<< HEAD
   controls.target.set(0, 1, 0);
   controls.update();
+=======
+  controls.target.set(1, 2, 0);
+  controls.update();
+
+>>>>>>> bc903e3a0329403fa2e32164f2e3683e96cd749b
   
   const wireframeBtn = document.getElementById("toggleWireframe");
   wireframeBtn.addEventListener('click', function () {
@@ -155,9 +173,12 @@ loadModel('assets/models/RoomCCC.glb');
  
   // Handle resizing
   window.addEventListener('resize', resize, false);
+<<<<<<< HEAD
   
   // Start the animation loop
   animate();
+=======
+>>>>>>> bc903e3a0329403fa2e32164f2e3683e96cd749b
 }
 
 function toggleWireframe(enable) {
@@ -169,6 +190,7 @@ if (object.isMesh) {
   });
 }
 
+<<<<<<< HEAD
 function animate() {
   requestAnimationFrame(animate);
 
@@ -189,6 +211,8 @@ function animate() {
 
 }
 
+=======
+>>>>>>> bc903e3a0329403fa2e32164f2e3683e96cd749b
 function resize() {
   const canvas = document.getElementById('threeContainer');
   const width = window.innerWidth;
