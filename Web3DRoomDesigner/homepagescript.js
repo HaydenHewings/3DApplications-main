@@ -19,7 +19,7 @@ clock = new THREE.Clock();
   
   // Set up the camera
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.set(1, 2, 6);
+  camera.position.set(1, 1, 6);
 
   const listener = new THREE.AudioListener();
   camera.add(listener);
@@ -93,7 +93,7 @@ sound.setVolume(1,0);
 
   // Add OrbitControls
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.target.set(1, 2, 0);
+  controls.target.set(1, 1, 0);
   controls.update();
   
   const wireframeBtn = document.getElementById("toggleWireframe");

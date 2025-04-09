@@ -19,7 +19,28 @@ clock = new THREE.Clock();
   
   // Set up the camera
   camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.set(1, 2, 6);
+  camera.position.set(7, 2, 6);
+
+  const listener = new THREE.AudioListener();
+  camera.add(listener);
+
+  sound = new THREE.Audio(listener);
+  secondSound = new THREE.Audio(listener);
+
+  const audioLoader = new THREE.AudioLoader();
+  audioLoader.load('assets/can_opening.mp3', function (buffer) {
+sound.setBuffer(buffer);
+sound.setLoop(false);
+sound.setVolume(1,0);
+
+  });
+
+  audioLoader.load('assets/Can crush.mp3', function (buffer) {
+    secondSound.setBuffer(buffer);
+    secondSound.setLoop(false);
+    secondSound.setVolume(1,0);
+  });
+  
 
   const ambient = new THREE.HemisphereLight(0xffffbb, 0x080820, 4);
   scene.add(ambient);
@@ -121,7 +142,7 @@ loader.load(modelPath, function (gltf) {
 const model = gltf.scene;
 
 model.position.set(0, 0, -10);
-model.rotation.set(0, -90, 0);
+model.rotation.set(0, -45, 0);
 
 scene.add(model);
 

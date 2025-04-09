@@ -70,18 +70,20 @@
   <br>
 
   <div id="main_3d_image">
-    <div id="main_text" class="col-xs-12 col-sm-4">
-      <h2>Welcome to DreamDecor!</h2>
-      <h3>Create the bedroom of your dreams!</h3>
-      <p>Here at DreamDecor, we offer a wide range of options for room sizes, beds and assorted furniture to help you design and visualise the ideal bedroom just for you!.</p>
+    <div id="main_text" class="col-xs-12 col-sm-4 col-md-8 col-centered">
+      <h2 class="text=center">Welcome to DreamDecor!</h2>
+      <h3 class="text=center">Create the bedroom of your dreams!</h3>
+      <p class="text=center">Here at DreamDecor, we offer a wide range of options for room sizes, beds and assorted furniture to help you design and visualise the ideal bedroom just for you!</p>
+      <p class="text=center">We have a huge range of rooms, furniture and beds for you to explore and experience with our state-of-the-art 3D interactive models on the respective pages. Give them a try!</p>
     </div>
   </div>
 
   <br>
+  
  <div id="gui-container"></div>
- <div class="container-fluid main-contents">
+ <div class="container-fluid main-contents col-centered">
    <div class="row">
-        <div class="col-sm-10">
+        <div class="col-sm-10 col-centered">
       <div class="card" style="position: relative;">
         <div class="card-header">
           <h1> Here are the many different ways you can create your own dream bedroom!</h1>
@@ -116,10 +118,10 @@
   function updateContainerSize() {
 var container = document.getElementById('threeContainer');
 var width = window.innerWidth;
-var height = 500;
+var height = window.innerHeight;
 
 container.width = width;
-container.height = 400;
+container.height = height;
 
 
   }

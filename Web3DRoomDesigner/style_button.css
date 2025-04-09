@@ -14,43 +14,43 @@
   #btn{
     background: #fea;
     padding: 15px;
-    font-family: arial;
+    font-family: DreamDecorFontA;
   } 
 
   #toggleWireframe{
     background: #fea;
     padding: 15px;
-    font-family: arial;
+    font-family: DreamDecorFontA;
   }
 
   #Rotate{
     background: #fea;
     padding: 15px;
-    font-family: arial;
+    font-family: DreamDecorFontA;
   }
 
   #showModelA{
-    background: rgb(255, 204, 0);
+    background: rgb(141, 222, 247);
     padding: 15px;
-    font-family: arial;
+    font-family: DreamDecorFontA;
   }
 
   #showModelB{
-    background: rgb(255, 204, 0);
+    background: rgb(141, 222, 247);
     padding: 15px;
-    font-family: arial;
+    font-family: DreamDecorFontA;
   }
 
   #showModelC{
-    background: rgb(255, 204, 0);
+    background: rgb(141, 222, 247);
     padding: 15px;
-    font-family: arial;
+    font-family: DreamDecorFontA;
   }
 
   #playSecondModelAnimation{
     background: #fea;
     padding: 15px;
-    font-family: arial;
+    font-family: DreamDecorFontA;
   }
 
   #threeContainer {
