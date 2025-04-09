@@ -72,7 +72,7 @@ clock = new THREE.Clock();
 
   // Add OrbitControls
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.target.set(1, 2, 0);
+  controls.target.set(4, 4, 0);
   controls.update();
   
   // Button to control animations
@@ -120,7 +120,8 @@ if(loadedModel) {
 loader.load(modelPath, function (gltf) {
 const model = gltf.scene;
 
-model.position.set(0, 0, 0);
+model.position.set(0, 0, -10);
+model.rotation.set(0, -90, 0);
 
 scene.add(model);
 
