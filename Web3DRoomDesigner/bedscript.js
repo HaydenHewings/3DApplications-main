@@ -93,7 +93,7 @@ sound.setVolume(1,0);
 
   // Add OrbitControls
   const controls = new THREE.OrbitControls(camera, renderer.domElement);
-  controls.target.set(1, 1, 1);
+  controls.target.set(0, 2, 0);
   controls.update();
   
   // Button to control animations

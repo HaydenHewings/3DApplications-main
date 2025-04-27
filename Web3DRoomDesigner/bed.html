@@ -10,7 +10,7 @@
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_bed.css">
   <link rel="stylesheet" href="style_button.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,10 +23,10 @@
 <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script>
 <script src="js/bootstrap.js"></script>
 
-<title>Bed Page</title>
+<title>DreamDecor</title>
 </head>
 <body id="bodyColor">
-  <nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+  <nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_dreamdecor">
       <div class="container-fluid"> 
    
         <div class="logo">
@@ -70,25 +70,27 @@
   <br>
 
   <div id="main_3d_image">
-    <div id="main_text" class="col-xs-12 col-sm-4">
-      <h2>Beds</h2>
-      <h3>Cause where else are you gonna sleep?</h3>
-      <p>From velvetey duvets to cloud-like pillows, DreamDecor has a wide selection of different beds you can mix and match to design your dream sleeping haven.</p>
+    <div id="main_text" class="col-xs-12 col-sm-4 col-md-8 col-centered">
+      <h2 class="text=center">Beds!</h2>
+      <h3 class="text=center">Cause where else are you gonna sleep?</h3>
+      <p class="text=center">From velvetey duvets to cloud-like pillows, DreamDecor has a wide selection of different beds you can mix and match to design your dream sleeping haven.</p>
+      <p class="text=center">Each one of our beds is made with the finest of materials to guarantee a cozy, comfortable night every night.</p>
     </div>
   </div>
 
   <br>
+
  <div id="gui-container"></div>
- <div class="container-fluid main-contents">
+ <div class="container mt-5">
    <div class="row">
-        <div class="col-sm-10">
+        <div class="container mt-5">
       <div class="card" style="position: relative;">
         <div class="card-header">
           <h1> Bed Models!</h1>
         </div>
-        <div class="card-body">
-    <div class="d-flex align-items-center">
-<canvas id="threeContainer"></canvas>
+  <div class="card-body">
+    <div class="d-flex">
+      <canvas id="threeContainer"></canvas>
         </div>
         <button id="btn">
           Pull Duvet
@@ -111,8 +113,6 @@
       </div>
     </div>
   </div>
-
-<div id ="threeContainer"></div>
 
 <script>
 

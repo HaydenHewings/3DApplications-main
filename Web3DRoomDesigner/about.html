@@ -10,13 +10,15 @@
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 
   <link rel="stylesheet" href="css/bootstrap.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_main.css">
+  <link rel="stylesheet" href="style_button.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
 
 <script src="https://kit.fontawesome.com/6ac3910c4e.js" crossorigin="anonymous"></script>
 <script src="js/bootstrap.js"></script>
@@ -24,13 +26,11 @@
 <title>About</title>
 </head>
 <body id="bodyColor">
-  <nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_coca_cola">
+  <nav id="headerColor" class="navbar sticky-top navbar-expand-sm navbar_dreamdecor">
       <div class="container-fluid"> 
    
         <div class="logo">
-                <a class="navbar-brand" href="homepage.html">
-                  <h1>About</h1>
-                </a>
+          <img class="rounded mx-auto d-block text-center" src="assets/images/DreamDecorAbout.png" alt="DreamDecor">
         </div>
 
      
@@ -69,6 +69,84 @@
 
   <br>
 
+  <h2>About</h2>
+  This website was created as an interactive bedroom designer, where the user would not only get to reimagine their own dream bedroom from different parts, but also have the chance to view each individual part of the bedroom as 3D models.
+
+  <div class="mt-4"></div>
+
+  <h2>3D models</h2>
+  I designed the models for the bedroom and its parts using Blender, where I designed three bedroom shapes, three bed designs and three different kinds of furniture.
+  Each model has their own unique animations I created to add some character and life to them, as opposed to them just being static models.
+  The textures I used ranged from basic flat colours with different materials to allow light to bounce off it, to image textures for the bedroom wallpapers.
+  
+  <div class="mt-4"></div>
+
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-6">
+        <img src="assets/images/About/Blender_Desk.png" alt="Blender screen capture of the creation of the desk model" class="img-fluid" id="image1">
+      </div>
+      <div class="col-6">
+        <img src="assets/images/About/Blender_Bed_Anim.png" alt="Blender screen capture of the duvet being animated" class="img-fluid" id="image2">
+      </div>
+    </div>
+  </div>
+  
+  <div class="mt-4"></div>
+
+  <h2>Design </h2>
+  Using Bootstrap, I implemented lots of elements that served as the basis for my website.
+  I started off by creating a header and a navbar, the latter using a custom logo I had made in ibisPaintX.
+  I then created an interactive design on the main page using CSS, where the model would be situated.
+  I used three.js to add a light to my scene as well as include a hemisphere light so users could move around and control to their liking.
+  <div class="mt-4"></div>
+  For the website's aesthetic and design, I wanted something with calm, light colours to give off a 'dream-like' feel, so I used colours of blue and light yellow to emulate that feeling.
+  This was based on feedback I previously had from fellow students that the aesthetic did not feel very unique, and felt more basic, which is the reason for the choice of colours.
+  
+  <div class="mt-4"></div>
+
+  <h2>Integration </h2>
+  Instead of simply using flat colours for the background images and navigation bars, I put together my own designs in ibisPaintX and added them through CSS into my websites.
+  Each page of the website had their own unique design corresponding to it to give them their own identity and make them stand out, as opposed to sticking to a single background for the entire website.
+  I created multiple different variants of each background and implemented them in CSS so that when the screen is resized, the background would shrink to match the size of the window. 
+
+  <div class="mt-4"></div>
+
+  <h2>Interaction </h2>
+  To allow the users to interact with the 3D models, I added an Orbit Control feature to the canvas with a JS script.
+  In addition to simply dragging on the model to move it around in the 3D space, I also added the feature to rotate the model in 15 degree increments, as well as view the wireframe.
+  <div class="mt-4"></div>
+  One feature I included was the ability to view different models in the same canvas so I added buttons below that let users switch between models, all with their own unique designs and animations.
+  This was an easy to create feature that I simply copied into the other pages, only changing the names of the models to match the ones I want to use for the page.
+  
+  <div class="mt-4"></div>
+
+  <h2>Implementation </h2>
+  To test my models lighting, I had to experiment with different kinds of materials for the textures in Blender to see which ones showed more light bouncing off to make it visible in the canvases.
+  From this testing, I deduced that using a slightly metallic material with a lower roughness for all the textures would result in more light being shown on the models.
+  <div class="mt-4"></div>
+  Additionally, I conducted tests of the website with fellow peers in order to gain some additional feedback, with everyone finding the website to be functional, but lacking its own identity, in terms of appearance.
+  This is when I decided to design my own background decals for each individual page.
+
+  
+  <div class="mt-4"></div>
+  
+  <h2>Deeper Understanding</h2>
+  I followed a similar format to the demonstrations shown in the lab videos but rather than only using one model with two animations, I implemented three different models, each with their own unique animations, depending on what the object was.
+  For example, the doors on each room opened differently and each piece of furniture had a different action (books falling down, chair spinning, wardrobe door opening, etc.)
+  <div class="mt-4"></div>
+  For the 3D Models, I decided to create more intricate designs beyond a simple coke can, from the demonstration, and had them all as three different parts 
+  making up an entire bedroom (room base, bed and furniture), which made all of them feel linked to each other in a way, hence making each page of the website feel more connected to each other.
+
+  
+  <div class="mt-4"></div>
+
+  <h2>Implementation and publication</h2>
+  I have included an about page which details the design process of the website and describes how different parts of the code work.
+  <div class="mt-4"></div>
+  I have zipped and my website and I have tested that my folder can be opened in Visual Studio Code when unzipped and works as it should. 
+  
+  <div class="mt-4"></div>
 
 
 <br>

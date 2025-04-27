@@ -212,8 +212,8 @@ function animate() {
 
 function resize() {
   const canvas = document.getElementById('threeContainer');
-  const width = window.innerWidth;
-  const height = window.innerHeight;
+  const width = canvas.clientWidth;
+  const height = canvas.clientHeight;
 
   camera.aspect = width / height;
   camera.updateProjectionMatrix();
